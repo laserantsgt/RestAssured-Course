@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LaserAnts-Suite" data-provider-thread-count="15">
+    <test name="Testsuite">
+
+        <groups>
+            <run>
+                <include name="bonus-delete"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="getRequests.GetMethodRequests"/>
+            <class name="postRequest.CreateNewUser"/>
+            <class name="deleteRequests.DeleteMethods"/>
+            <class name="bonus.CreatingUsersInParallel"/>
+            <class name="bonus.DeleteQAData"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="listeners.RestAssuredListener"/>
+    </listeners>
+</suite>
